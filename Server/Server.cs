@@ -52,7 +52,7 @@ namespace Server
             }
             catch (SocketException ex)
             {
-                Debug.WriteLine(">>>> " + ex.Message);
+                Debug.WriteLine($">>>> {ex.Message}");
             }
         }
 
