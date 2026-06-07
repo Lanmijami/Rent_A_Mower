@@ -50,7 +50,7 @@ namespace Server
             {
                 switch (request.Operation)
                 {
-                    case Operation.End:
+                    case Operation.Kraj:
                         end = true;
                         break;
                     default:
