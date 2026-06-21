@@ -12,7 +12,7 @@ namespace Common
         public string JsonData { get; set; }
         public bool isSuccessful { get; set; }
         public string Message { get; set; }
-        public T getData<T>()
+        public T GetData<T>()
         {
             return JsonSerializer.Deserialize<T>(JsonData);
         }

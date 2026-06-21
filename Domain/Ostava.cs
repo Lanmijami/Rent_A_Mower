@@ -13,7 +13,7 @@ namespace Domain
         public DateTime DatumOtvaranja { get; set; }
         public string KorisnickoIme { get; set; }
         public string Sifra { get; set; }
-        public string TableName => "Automat";
+        public string TableName => "Ostava";
 
         public string InsertColumns => "datumOtvaranja, korisnickoIme, sifra";
 
@@ -25,7 +25,7 @@ namespace Domain
         public Dictionary<string, object> Parameters => new Dictionary<string, object>
         {
             { "@IdOstava", IdOstava },
-            { "@DatumProizvodnje", DatumOtvaranja },
+            { "@DatumOtvaranja", DatumOtvaranja },
             { "@KorisnickoIme", KorisnickoIme },
             { "@Sifra", Sifra },
         };

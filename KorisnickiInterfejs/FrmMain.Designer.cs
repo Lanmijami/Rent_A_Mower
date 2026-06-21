@@ -1,0 +1,66 @@
+﻿namespace KorisnickiInterfejs
+{
+    partial class FrmMain
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            panelMain = new Panel();
+            SuspendLayout();
+            // 
+            // panelMain
+            // 
+            panelMain.Location = new Point(335, -4);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(467, 463);
+            panelMain.TabIndex = 0;
+            // 
+            // FrmMain
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(panelMain);
+            Name = "FrmMain";
+            Text = "Form1";
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Panel panelMain;
+        //public Panel PanelMenu { get => panelMenu; set => panelMenu = value; }
+        //public Panel PanelLogo { get => panelLogo; set => panelLogo = value; }
+        //public PictureBox PbLogo { get => pbLogo; set => pbLogo = value; }
+        //public IconButton IbNavicon { get => ibNavicon; set => ibNavicon = value; }
+        //public IconButton IbHome { get => ibHome; set => ibHome = value; }
+        //public IconButton IbSignOut { get => ibSignOut; set => ibSignOut = value; }
+        //public IconButton IbPoslovniPartneri { get => ibPoslovniPartneri; set => ibPoslovniPartneri = value; }
+        //public Label LblMinimize { get => lblMinimize; set => lblMinimize = value; }
+        //public Label LblX { get => lblX; set => lblX = value; }
+        public Panel PanelMain { get => panelMain; set => panelMain = value; }
+    }
+}
