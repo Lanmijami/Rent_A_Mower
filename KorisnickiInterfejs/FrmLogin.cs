@@ -13,6 +13,26 @@ namespace KorisnickiInterfejs
             loginController.Init(this);
         }
 
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+
+            }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            loginController.Registruj(this);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine(">>> Prijavi se!");
+            loginController.PrijaviOstavu(this);
+        }
+
         //private void lblX_Click(object sender, EventArgs e)
         //{
         //    loginController.Exit();
@@ -29,25 +49,5 @@ namespace KorisnickiInterfejs
         //{
         //    loginController.PrikaziSifru(this);
         //}
-
-        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnLogin.PerformClick();
-
-            }
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            Debug.WriteLine(">>> CLICK");
-            loginController.PrijaviOstavu(this);
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            loginController.Registruj(this);
-        }
     }
 }

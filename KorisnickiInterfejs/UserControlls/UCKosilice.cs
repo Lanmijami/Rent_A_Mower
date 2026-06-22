@@ -21,24 +21,19 @@ namespace KorisnickiInterfejs.UserControlls
             kosiliceController.Init(this);
         }
 
-        private void dgvKosilice_SelectionChanged(object sender, EventArgs e)
-        {
-            kosiliceController.SelectionChanged(this);
-        }
-
         private void btnUbaci_Click(object sender, EventArgs e)
         {
             kosiliceController.Ubaci(this);
         }
 
-        private void btnPretrazi_Click(object sender, EventArgs e)
-        {
-            kosiliceController.Pretrazi(this);
-        }
-
         private void btnPromeni_Click(object sender, EventArgs e)
         {
             kosiliceController.Promeni(this);
+        }
+
+        private void btnPretrazi_Click(object sender, EventArgs e)
+        {
+            kosiliceController.Pretrazi(this);
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)
@@ -49,6 +44,11 @@ namespace KorisnickiInterfejs.UserControlls
         private void btnKreiraj_Click(object sender, EventArgs e)
         {
             kosiliceController.Kreiraj(this);
+        }
+
+        private void dgvKosilice_SelectionChanged(object sender, EventArgs e)
+        {
+            kosiliceController.SelectionChanged(this);
         }
     }
 }

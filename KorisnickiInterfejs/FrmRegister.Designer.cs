@@ -73,6 +73,7 @@
             btnPrijavi.TabIndex = 2;
             btnPrijavi.Text = "Prijavi";
             btnPrijavi.UseVisualStyleBackColor = true;
+            btnPrijavi.Click += btnPrijavi_Click;
             // 
             // panel1
             // 
@@ -134,6 +135,7 @@
             checkbxShow.TabIndex = 9;
             checkbxShow.Text = "Prikazi sifru";
             checkbxShow.UseVisualStyleBackColor = true;
+            checkbxShow.CheckedChanged += checkbxShow_CheckedChanged;
             // 
             // lblDatum
             // 
@@ -176,6 +178,7 @@
             buttonDodaj.TabIndex = 14;
             buttonDodaj.Text = "+";
             buttonDodaj.UseVisualStyleBackColor = true;
+            buttonDodaj.Click += buttonDodaj_Click;
             // 
             // btnRegistruj
             // 
@@ -185,6 +188,7 @@
             btnRegistruj.TabIndex = 15;
             btnRegistruj.Text = "Registruj";
             btnRegistruj.UseVisualStyleBackColor = true;
+            btnRegistruj.Click += btnRegistruj_Click;
             // 
             // FrmRegister
             // 

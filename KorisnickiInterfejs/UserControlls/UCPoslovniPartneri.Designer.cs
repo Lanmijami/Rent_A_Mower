@@ -79,6 +79,7 @@
             btnObrisi.TabIndex = 12;
             btnObrisi.Text = "Obrisi";
             btnObrisi.UseVisualStyleBackColor = true;
+            btnObrisi.Click += btnObrisi_Click;
             // 
             // btnPromeni
             // 
@@ -88,6 +89,7 @@
             btnPromeni.TabIndex = 11;
             btnPromeni.Text = "Promeni";
             btnPromeni.UseVisualStyleBackColor = true;
+            btnPromeni.Click += btnPromeni_Click;
             // 
             // btnPretrazi
             // 
@@ -97,6 +99,7 @@
             btnPretrazi.TabIndex = 10;
             btnPretrazi.Text = "Pretrazi";
             btnPretrazi.UseVisualStyleBackColor = true;
+            btnPretrazi.Click += btnPretrazi_Click;
             // 
             // btnUbaci
             // 
@@ -106,6 +109,7 @@
             btnUbaci.TabIndex = 9;
             btnUbaci.Text = "Ubaci";
             btnUbaci.UseVisualStyleBackColor = true;
+            btnUbaci.Click += btnUbaci_Click;
             // 
             // buttonDodaj
             // 
@@ -115,6 +119,7 @@
             buttonDodaj.TabIndex = 8;
             buttonDodaj.Text = "+";
             buttonDodaj.UseVisualStyleBackColor = true;
+            buttonDodaj.Click += buttonDodaj_Click;
             // 
             // cmbMesto
             // 
@@ -198,6 +203,7 @@
             dgvPoslovniPartner.Name = "dgvPoslovniPartner";
             dgvPoslovniPartner.Size = new Size(483, 372);
             dgvPoslovniPartner.TabIndex = 2;
+            dgvPoslovniPartner.SelectionChanged += dgvPoslovniPartner_SelectionChanged;
             // 
             // btnKreiraj
             // 
@@ -207,6 +213,7 @@
             btnKreiraj.TabIndex = 1;
             btnKreiraj.Text = "Kreiraj";
             btnKreiraj.UseVisualStyleBackColor = true;
+            btnKreiraj.Click += btnKreiraj_Click;
             // 
             // lblPoslovniPartner
             // 

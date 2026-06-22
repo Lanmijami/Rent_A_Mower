@@ -103,6 +103,7 @@
             btnUbaci.TabIndex = 7;
             btnUbaci.Text = "Ubaci";
             btnUbaci.UseVisualStyleBackColor = true;
+            btnUbaci.Click += btnUbaci_Click;
             // 
             // UCUbaciMesto
             // 

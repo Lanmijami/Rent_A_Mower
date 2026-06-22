@@ -193,7 +193,7 @@ namespace KorisnickiInterfejs.GUIControllers
             //}
         }
 
-        internal void PrikaziBicikle(FrmMain frmMain)
+        internal void PrikaziKosilice(FrmMain frmMain)
         {
             HandleIznajmljivanjaSelectionChangedBug(frmMain);
             frmMain.PanelMain.Controls.Clear();

@@ -23,14 +23,16 @@ namespace KorisnickiInterfejs.UserControlls
             InitializeComponent();
         }
 
+        private void btnUbaci_Click(object sender, EventArgs e)
+        {
+            ubaciMestoController.UbaciMesto(this, frmDialog);
+        }
+
         //private void lblX_Click(object sender, EventArgs e)
         //{
         //    ubaciMestoController.Close(this, frmDialog);
         //}
 
-        private void btnUbaci_Click(object sender, EventArgs e)
-        {
-            ubaciMestoController.UbaciMesto(this, frmDialog);
-        }
+
     }
 }

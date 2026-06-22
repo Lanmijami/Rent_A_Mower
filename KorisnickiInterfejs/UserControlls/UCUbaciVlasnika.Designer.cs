@@ -87,6 +87,7 @@
             btnUbaci.TabIndex = 5;
             btnUbaci.Text = "btnUbaci";
             btnUbaci.UseVisualStyleBackColor = true;
+            btnUbaci.Click += btnUbaci_Click;
             // 
             // lblEmail
             // 

@@ -111,7 +111,7 @@
             Controls.Add(btnRegister);
             Controls.Add(lblSistem);
             Name = "FrmLogin";
-            Text = "Form1";
+            Text = "Login";
             KeyDown += FrmLogin_KeyDown;
             ResumeLayout(false);
             PerformLayout();

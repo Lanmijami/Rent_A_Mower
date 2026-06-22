@@ -22,6 +22,16 @@ namespace KorisnickiInterfejs
             registerController.Init(this);
         }
 
+        private void buttonDodaj_Click(object sender, EventArgs e)
+        {
+            registerController.DodajLokacija(this);
+        }
+
+        private void btnRegistruj_Click(object sender, EventArgs e)
+        {
+            registerController.RegistrujAutomat(this);
+        }
+
         private void btnPrijavi_Click(object sender, EventArgs e)
         {
             registerController.Prijavi(this);
@@ -41,15 +51,5 @@ namespace KorisnickiInterfejs
         //{
         //    registerController.Minimize(this);
         //}
-
-        private void btnRegistruj_Click(object sender, EventArgs e)
-        {
-            registerController.RegistrujAutomat(this);
-        }
-
-        private void buttonDodaj_Click(object sender, EventArgs e)
-        {
-            registerController.DodajLokacija(this);
-        }
     }
 }

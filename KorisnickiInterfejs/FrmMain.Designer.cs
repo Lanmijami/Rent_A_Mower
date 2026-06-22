@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             panelMain = new Panel();
+            btnPocetna = new Button();
+            btnPoslovniPartneri = new Button();
+            btnKosilice = new Button();
+            btnIznajmljivanja = new Button();
+            btnOdjava = new Button();
             SuspendLayout();
             // 
             // panelMain
@@ -38,20 +43,81 @@
             panelMain.Size = new Size(467, 463);
             panelMain.TabIndex = 0;
             // 
+            // btnPocetna
+            // 
+            btnPocetna.Location = new Point(38, 73);
+            btnPocetna.Name = "btnPocetna";
+            btnPocetna.Size = new Size(138, 23);
+            btnPocetna.TabIndex = 1;
+            btnPocetna.Text = "Pocetna";
+            btnPocetna.UseVisualStyleBackColor = true;
+            btnPocetna.Click += btnPocetna_Click;
+            // 
+            // btnPoslovniPartneri
+            // 
+            btnPoslovniPartneri.Location = new Point(38, 124);
+            btnPoslovniPartneri.Name = "btnPoslovniPartneri";
+            btnPoslovniPartneri.Size = new Size(138, 23);
+            btnPoslovniPartneri.TabIndex = 2;
+            btnPoslovniPartneri.Text = "Poslovni partneri";
+            btnPoslovniPartneri.UseVisualStyleBackColor = true;
+            btnPoslovniPartneri.Click += btnPoslovniPartneri_Click;
+            // 
+            // btnKosilice
+            // 
+            btnKosilice.Location = new Point(38, 178);
+            btnKosilice.Name = "btnKosilice";
+            btnKosilice.Size = new Size(138, 23);
+            btnKosilice.TabIndex = 3;
+            btnKosilice.Text = "Kosilice";
+            btnKosilice.UseVisualStyleBackColor = true;
+            btnKosilice.Click += btnKosilice_Click;
+            // 
+            // btnIznajmljivanja
+            // 
+            btnIznajmljivanja.Location = new Point(38, 235);
+            btnIznajmljivanja.Name = "btnIznajmljivanja";
+            btnIznajmljivanja.Size = new Size(138, 23);
+            btnIznajmljivanja.TabIndex = 4;
+            btnIznajmljivanja.Text = "Iznajmljivanja";
+            btnIznajmljivanja.UseVisualStyleBackColor = true;
+            btnIznajmljivanja.Click += btnIznajmljivanja_Click;
+            // 
+            // btnOdjava
+            // 
+            btnOdjava.Location = new Point(47, 418);
+            btnOdjava.Name = "btnOdjava";
+            btnOdjava.Size = new Size(75, 23);
+            btnOdjava.TabIndex = 5;
+            btnOdjava.Text = "Odjava";
+            btnOdjava.UseVisualStyleBackColor = true;
+            btnOdjava.Click += btnOdjava_Click;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnOdjava);
+            Controls.Add(btnIznajmljivanja);
+            Controls.Add(btnKosilice);
+            Controls.Add(btnPoslovniPartneri);
+            Controls.Add(btnPocetna);
             Controls.Add(panelMain);
             Name = "FrmMain";
-            Text = "Form1";
+            Text = "Main";
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panelMain;
+        private Button btnPocetna;
+        private Button btnPoslovniPartneri;
+        private Button btnKosilice;
+        private Button btnIznajmljivanja;
+        private Button btnOdjava;
+
         //public Panel PanelMenu { get => panelMenu; set => panelMenu = value; }
         //public Panel PanelLogo { get => panelLogo; set => panelLogo = value; }
         //public PictureBox PbLogo { get => pbLogo; set => pbLogo = value; }

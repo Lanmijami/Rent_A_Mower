@@ -21,7 +21,7 @@ namespace KorisnickiInterfejs.UserControlls
             poslovniPartneriController.Init(this);
         }
 
-        private void dgvPoslovniPartneri_SelectionChanged(object sender, EventArgs e)
+        private void dgvPoslovniPartner_SelectionChanged(object sender, EventArgs e)
         {
             poslovniPartneriController.SelectionChanged(this);
         }
@@ -29,11 +29,6 @@ namespace KorisnickiInterfejs.UserControlls
         private void btnUbaci_Click(object sender, EventArgs e)
         {
             poslovniPartneriController.Ubaci(this);
-        }
-
-        private void btnObrisi_Click(object sender, EventArgs e)
-        {
-            poslovniPartneriController.Obrisi(this);
         }
 
         private void btnPretrazi_Click(object sender, EventArgs e)
@@ -46,14 +41,19 @@ namespace KorisnickiInterfejs.UserControlls
             poslovniPartneriController.Promeni(this);
         }
 
-        private void buttonKreiraj_Click(object sender, EventArgs e)
+        private void btnObrisi_Click(object sender, EventArgs e)
         {
-            poslovniPartneriController.Kreiraj(this);
+            poslovniPartneriController.Obrisi(this);
         }
 
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
             poslovniPartneriController.DodajMesto(this);
+        }
+
+        private void btnKreiraj_Click(object sender, EventArgs e)
+        {
+            poslovniPartneriController.Kreiraj(this);
         }
     }
 }

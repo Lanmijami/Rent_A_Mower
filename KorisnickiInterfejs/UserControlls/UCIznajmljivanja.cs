@@ -31,26 +31,6 @@ namespace KorisnickiInterfejs.UserControlls
             iznajmljivanjaController.StavkeSelectionChanged(this);
         }
 
-        private void btnObrisiStavka_Click(object sender, EventArgs e)
-        {
-            iznajmljivanjaController.ObrisiStavka(this);
-        }
-
-        private void btnUbaciStavka_Click(object sender, EventArgs e)
-        {
-            iznajmljivanjaController.UbaciStavka(this);
-        }
-
-        private void btnObrisiIznajmljivanje_Click(object sender, EventArgs e)
-        {
-            iznajmljivanjaController.ObrisiIznajmljivanje(this);
-        }
-
-        private void btnKreirajIznajmljivanje_Click(object sender, EventArgs e)
-        {
-            iznajmljivanjaController.KreirajIznajmljivanje(this);
-        }
-
         private void btnUbaciIznajmljivanje_Click(object sender, EventArgs e)
         {
             iznajmljivanjaController.UbaciIznajmljivanje(this);
@@ -66,12 +46,32 @@ namespace KorisnickiInterfejs.UserControlls
             iznajmljivanjaController.PretraziIznajmljivanje(this);
         }
 
-        private void dtpIznajmljivanja_ValueChanged(object sender, EventArgs e)
+        private void btnObrisiIznajmljivanje_Click(object sender, EventArgs e)
+        {
+            iznajmljivanjaController.ObrisiIznajmljivanje(this);
+        }
+
+        private void btnUbaciStavka_Click(object sender, EventArgs e)
+        {
+            iznajmljivanjaController.UbaciStavka(this);
+        }
+
+        private void btnObrisiStavka_Click(object sender, EventArgs e)
+        {
+            iznajmljivanjaController.ObrisiStavka(this);
+        }
+
+        private void btnKreiraj_Click(object sender, EventArgs e)
+        {
+            iznajmljivanjaController.KreirajIznajmljivanje(this);
+        }
+
+        private void dtpDatumIznajmljivanja_ValueChanged(object sender, EventArgs e)
         {
             iznajmljivanjaController.HandleDtpIznajmljivanjaValueChanged(this);
         }
 
-        private void dtpPovratka_ValueChanged(object sender, EventArgs e)
+        private void dtpDatumPovratka_ValueChanged(object sender, EventArgs e)
         {
             iznajmljivanjaController.HandleDtpPovratkaValueChanged(this);
         }

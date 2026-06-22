@@ -77,6 +77,7 @@
             btnObrisi.TabIndex = 11;
             btnObrisi.Text = "Obrisi";
             btnObrisi.UseVisualStyleBackColor = true;
+            btnObrisi.Click += btnObrisi_Click;
             // 
             // btnPromeni
             // 
@@ -86,6 +87,7 @@
             btnPromeni.TabIndex = 10;
             btnPromeni.Text = "Promeni";
             btnPromeni.UseVisualStyleBackColor = true;
+            btnPromeni.Click += btnPromeni_Click;
             // 
             // btnPretrazi
             // 
@@ -95,6 +97,7 @@
             btnPretrazi.TabIndex = 9;
             btnPretrazi.Text = "Pretrazi";
             btnPretrazi.UseVisualStyleBackColor = true;
+            btnPretrazi.Click += btnPretrazi_Click;
             // 
             // btnUbaci
             // 
@@ -104,6 +107,7 @@
             btnUbaci.TabIndex = 8;
             btnUbaci.Text = "Ubaci";
             btnUbaci.UseVisualStyleBackColor = true;
+            btnUbaci.Click += btnUbaci_Click;
             // 
             // txtCena
             // 
@@ -186,6 +190,7 @@
             dgvKosilice.Name = "dgvKosilice";
             dgvKosilice.Size = new Size(408, 378);
             dgvKosilice.TabIndex = 2;
+            dgvKosilice.SelectionChanged += dgvKosilice_SelectionChanged;
             // 
             // btnKreiraj
             // 
@@ -195,6 +200,7 @@
             btnKreiraj.TabIndex = 1;
             btnKreiraj.Text = "Kreiraj";
             btnKreiraj.UseVisualStyleBackColor = true;
+            btnKreiraj.Click += btnKreiraj_Click;
             // 
             // lblKosilice
             // 
