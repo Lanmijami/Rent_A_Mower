@@ -9,6 +9,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ApplicationLogic\ApplicationLogic.csproj" />
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\DatabaseBroker\DatabaseBroker.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\KorisnickiInterfejs\KorisnickiInterfejs.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\Server\Server.csproj" />
+    <ProjectReference Include="..\SystemOperations\SystemOperations.csproj" />
   </ItemGroup>
 
 </Project>

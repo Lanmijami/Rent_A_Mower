@@ -223,6 +223,13 @@ namespace KorisnickiInterfejs.GUIControllers
             //}
         }
 
+        internal void UbaciVlasnika(FrmMain frmMain)
+        {
+            HandleIznajmljivanjaSelectionChangedBug(frmMain);
+            frmMain.PanelMain.Controls.Clear();
+            frmMain.PanelMain.Controls.Add(new UCUbaciVlasnika());
+        }
+
         internal void PrikaziIznajmljivanja(FrmMain frmMain)
         {
             HandleIznajmljivanjaSelectionChangedBug(frmMain);
@@ -248,5 +255,7 @@ namespace KorisnickiInterfejs.GUIControllers
                 iznajmljivanjaControl.DgvStavke.SelectionChanged -= iznajmljivanjaControl.dgvStavke_SelectionChanged;
             }
         }
+
+       
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs.UserControlls
 {
-    public partial class UCUbaciVlasnika : UserControl
+    public partial class UCUbaciVlasnika : BaseUserControl
     {
         private UbaciVlasnikController ubaciVlasnikaController;
         internal UserControlDialog frmDialog;
@@ -19,6 +19,13 @@ namespace KorisnickiInterfejs.UserControlls
         public UCUbaciVlasnika(UserControlDialog frmDialog)
         {
             this.frmDialog = frmDialog;
+            this.ubaciVlasnikaController = UbaciVlasnikController.Instance;
+            InitializeComponent();
+        }
+
+        public UCUbaciVlasnika()
+        {
+            //this.frmDialog = frmDialog;
             this.ubaciVlasnikaController = UbaciVlasnikController.Instance;
             InitializeComponent();
         }

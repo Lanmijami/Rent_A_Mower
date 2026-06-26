@@ -26,7 +26,7 @@ namespace SystemOperations
                 List<Ostava> ostave = repository.GetAll(new Ostava()).OfType<Ostava>().ToList();
                 Validate(ostave);
 
-                Result = null;
+                //Result = null;
             }
             catch (Exception ex)
             {

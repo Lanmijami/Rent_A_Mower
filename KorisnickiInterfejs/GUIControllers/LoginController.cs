@@ -34,8 +34,8 @@ namespace KorisnickiInterfejs.GUIControllers
         internal void Init(FrmLogin frmLogin)
         {
             //frmLogin.Icon = Properties.Resources.mower;
-            frmLogin.TxtPassword.Text = "ostava1";
-            frmLogin.TxtUsername.Text = "ostava2";
+            frmLogin.TxtPassword.Text = "admin";
+            frmLogin.TxtUsername.Text = "admin";
         }
 
         internal async void Exit()

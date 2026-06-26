@@ -40,17 +40,21 @@
             // lblSistem
             // 
             lblSistem.AutoSize = true;
-            lblSistem.Location = new Point(57, 149);
+            lblSistem.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
+            lblSistem.Location = new Point(27, 103);
+            lblSistem.Margin = new Padding(4, 0, 4, 0);
             lblSistem.Name = "lblSistem";
-            lblSistem.Size = new Size(173, 15);
+            lblSistem.Size = new Size(502, 37);
             lblSistem.TabIndex = 0;
             lblSistem.Text = "Sistem za inzajmljivanje kosilica";
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(117, 365);
+            btnRegister.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold);
+            btnRegister.Location = new Point(27, 193);
+            btnRegister.Margin = new Padding(4, 4, 4, 4);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(75, 23);
+            btnRegister.Size = new Size(296, 73);
             btnRegister.TabIndex = 1;
             btnRegister.Text = "Registruj se";
             btnRegister.UseVisualStyleBackColor = true;
@@ -58,9 +62,11 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(441, 314);
+            btnLogin.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold);
+            btnLogin.Location = new Point(639, 283);
+            btnLogin.Margin = new Padding(4, 4, 4, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(75, 23);
+            btnLogin.Size = new Size(188, 58);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Prijavi se";
             btnLogin.UseVisualStyleBackColor = true;
@@ -68,41 +74,46 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(441, 125);
+            txtUsername.Location = new Point(738, 103);
+            txtUsername.Margin = new Padding(4, 4, 4, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(100, 23);
+            txtUsername.Size = new Size(141, 26);
             txtUsername.TabIndex = 3;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(441, 185);
+            txtPassword.Location = new Point(738, 169);
+            txtPassword.Margin = new Padding(4, 4, 4, 4);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(100, 23);
+            txtPassword.PasswordChar = 'x';
+            txtPassword.Size = new Size(141, 26);
             txtPassword.TabIndex = 4;
             // 
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(444, 77);
+            lblUsername.Location = new Point(634, 103);
+            lblUsername.Margin = new Padding(4, 0, 4, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(63, 15);
+            lblUsername.Size = new Size(96, 20);
             lblUsername.TabIndex = 5;
             lblUsername.Text = "Username:";
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(450, 158);
+            lblPassword.Location = new Point(639, 169);
+            lblPassword.Margin = new Padding(4, 0, 4, 0);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(60, 15);
+            lblPassword.Size = new Size(91, 20);
             lblPassword.TabIndex = 6;
             lblPassword.Text = "Password:";
             // 
             // FrmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(936, 380);
             Controls.Add(lblPassword);
             Controls.Add(lblUsername);
             Controls.Add(txtPassword);
@@ -110,6 +121,7 @@
             Controls.Add(btnLogin);
             Controls.Add(btnRegister);
             Controls.Add(lblSistem);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FrmLogin";
             Text = "Login";
             KeyDown += FrmLogin_KeyDown;

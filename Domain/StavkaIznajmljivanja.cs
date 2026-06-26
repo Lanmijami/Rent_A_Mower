@@ -34,7 +34,6 @@ namespace Domain
             /*{ "cenaNajma", CenaNajma },*/
             { "idKosilica", Kosilica?.IdKosilica },
         };
-
         public IEntity ReadObjectRow(SqlDataReader reader)
         {
             StavkaIznajmljivanja si = new StavkaIznajmljivanja();

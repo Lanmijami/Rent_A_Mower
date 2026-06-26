@@ -3,6 +3,7 @@ using Domain;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -113,14 +114,55 @@ namespace Repository
             command.Dispose();
         }
 
+        //public IEntity Get(IEntity obj)
+        //{
+        //    SqlCommand command = broker.CreateCommand();
+        //    try
+        //    {
+        //        command.CommandText = $"SELECT * FROM {obj.TableName} WHERE {obj.Condition}";
+        //    }
+        //    catch (Exception ex) { 
+        //        Debug.WriteLine(ex.Message);
+        //    }
+
+
+        //    foreach (var param in obj.Parameters)
+        //    {
+        //        command.Parameters.AddWithValue(param.Key, param.Value);
+        //    }
+
+        //    using (SqlDataReader reader = command.ExecuteReader())
+        //    {
+        //        if (reader.Read())
+        //        {
+        //            return obj.ReadObjectRow(reader);
+        //        }
+        //    }
+        //    return null;
+        //}
+
         public IEntity Get(IEntity obj)
         {
+            if (obj == null)
+                throw new ArgumentNullException(nameof(obj));
+
+            if (broker == null)
+                throw new InvalidOperationException("Broker is not initialized.");
+
             SqlCommand command = broker.CreateCommand();
+
+            if (string.IsNullOrWhiteSpace(obj.TableName) || string.IsNullOrWhiteSpace(obj.Condition))
+                throw new InvalidOperationException("Invalid SQL metadata (TableName or Condition is empty).");
+
             command.CommandText = $"SELECT * FROM {obj.TableName} WHERE {obj.Condition}";
 
-            foreach (var param in obj.Parameters)
+            // safe parameters handling
+            if (obj.Parameters != null)
             {
-                command.Parameters.AddWithValue(param.Key, param.Value);
+                foreach (var param in obj.Parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value ?? DBNull.Value);
+                }
             }
 
             using (SqlDataReader reader = command.ExecuteReader())
@@ -130,6 +172,7 @@ namespace Repository
                     return obj.ReadObjectRow(reader);
                 }
             }
+
             return null;
         }
 

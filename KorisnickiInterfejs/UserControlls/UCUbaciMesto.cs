@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs.UserControlls
 {
-    public partial class UCUbaciMesto : UserControl
+    public partial class UCUbaciMesto : BaseUserControl
     {
         private UbaciMestoController ubaciMestoController;
         internal UserControlDialog frmDialog;

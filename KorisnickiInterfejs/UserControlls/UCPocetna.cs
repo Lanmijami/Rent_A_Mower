@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs.UserControlls
 {
-    public partial class UCPocetna : UserControl
+    public partial class UCPocetna : BaseUserControl
     {
         private PocetnaController pocetnaController;
         public UCPocetna()

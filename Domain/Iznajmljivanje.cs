@@ -22,15 +22,10 @@ namespace Domain
         public int idOstava;
         public int idPoslovniPartner;
         public string TableName => "Iznajmljivanje";
-
         public string InsertColumns => "datumIznajmljivanja, datumPovratka, idOstava, idPoslovniPartner";
-
         public string InsertParameters => "@DatumIznajmljivanja, @DatumPovratka, @IdOstava, @IdPoslovniPartner";
-
         public string UpdateStatement => "datumIznajmljivanja = @DatumIznajmljivanja, datumPovratka = @DatumPovratka, idOstava = @IdOstava, idPoslovniPartner = @IdPoslovniPartner";
-
         public string Condition => $"idIznajmljivanje = @IdIznajmljivanje";
-
         public Dictionary<string, object> Parameters => new Dictionary<string, object>
         {
             { "@IdIznajmljivanje", IdIznajmljivanje },

@@ -68,16 +68,18 @@
             panelIznajmljivanja.Controls.Add(btnKreiraj);
             panelIznajmljivanja.Controls.Add(lblIznajmljivanja);
             panelIznajmljivanja.Controls.Add(dgvIznajmljivanja);
-            panelIznajmljivanja.Location = new Point(13, 14);
+            panelIznajmljivanja.Location = new Point(19, 19);
+            panelIznajmljivanja.Margin = new Padding(4);
             panelIznajmljivanja.Name = "panelIznajmljivanja";
-            panelIznajmljivanja.Size = new Size(368, 175);
+            panelIznajmljivanja.Size = new Size(619, 233);
             panelIznajmljivanja.TabIndex = 0;
             // 
             // btnKreiraj
             // 
-            btnKreiraj.Location = new Point(242, 13);
+            btnKreiraj.Location = new Point(490, 17);
+            btnKreiraj.Margin = new Padding(4);
             btnKreiraj.Name = "btnKreiraj";
-            btnKreiraj.Size = new Size(75, 23);
+            btnKreiraj.Size = new Size(107, 31);
             btnKreiraj.TabIndex = 2;
             btnKreiraj.Text = "Kreiraj";
             btnKreiraj.UseVisualStyleBackColor = true;
@@ -86,18 +88,20 @@
             // lblIznajmljivanja
             // 
             lblIznajmljivanja.AutoSize = true;
-            lblIznajmljivanja.Location = new Point(19, 13);
+            lblIznajmljivanja.Location = new Point(27, 17);
+            lblIznajmljivanja.Margin = new Padding(4, 0, 4, 0);
             lblIznajmljivanja.Name = "lblIznajmljivanja";
-            lblIznajmljivanja.Size = new Size(79, 15);
+            lblIznajmljivanja.Size = new Size(116, 20);
             lblIznajmljivanja.TabIndex = 1;
             lblIznajmljivanja.Text = "Iznajmljivanja";
             // 
             // dgvIznajmljivanja
             // 
             dgvIznajmljivanja.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvIznajmljivanja.Location = new Point(3, 64);
+            dgvIznajmljivanja.Location = new Point(4, 68);
+            dgvIznajmljivanja.Margin = new Padding(4);
             dgvIznajmljivanja.Name = "dgvIznajmljivanja";
-            dgvIznajmljivanja.Size = new Size(314, 108);
+            dgvIznajmljivanja.Size = new Size(593, 165);
             dgvIznajmljivanja.TabIndex = 0;
             dgvIznajmljivanja.SelectionChanged += dgvIznajmljivanja_SelectionChanged;
             // 
@@ -115,48 +119,54 @@
             panelIznajmljivanjaControls.Controls.Add(lblPoslovniPartner);
             panelIznajmljivanjaControls.Controls.Add(lblDatumPovratka);
             panelIznajmljivanjaControls.Controls.Add(lblDatumIznajmljivanja);
-            panelIznajmljivanjaControls.Location = new Point(13, 207);
+            panelIznajmljivanjaControls.Location = new Point(19, 276);
+            panelIznajmljivanjaControls.Margin = new Padding(4);
             panelIznajmljivanjaControls.Name = "panelIznajmljivanjaControls";
-            panelIznajmljivanjaControls.Size = new Size(368, 199);
+            panelIznajmljivanjaControls.Size = new Size(619, 265);
             panelIznajmljivanjaControls.TabIndex = 1;
             // 
             // cmbOstava
             // 
             cmbOstava.FormattingEnabled = true;
-            cmbOstava.Location = new Point(130, 114);
+            cmbOstava.Location = new Point(200, 152);
+            cmbOstava.Margin = new Padding(4);
             cmbOstava.Name = "cmbOstava";
-            cmbOstava.Size = new Size(121, 23);
+            cmbOstava.Size = new Size(284, 28);
             cmbOstava.TabIndex = 11;
             // 
             // cmbPoslovniPartner
             // 
             cmbPoslovniPartner.FormattingEnabled = true;
-            cmbPoslovniPartner.Location = new Point(130, 78);
+            cmbPoslovniPartner.Location = new Point(200, 104);
+            cmbPoslovniPartner.Margin = new Padding(4);
             cmbPoslovniPartner.Name = "cmbPoslovniPartner";
-            cmbPoslovniPartner.Size = new Size(121, 23);
+            cmbPoslovniPartner.Size = new Size(284, 28);
             cmbPoslovniPartner.TabIndex = 10;
             // 
             // dtpDatumPovratka
             // 
-            dtpDatumPovratka.Location = new Point(140, 42);
+            dtpDatumPovratka.Location = new Point(200, 56);
+            dtpDatumPovratka.Margin = new Padding(4);
             dtpDatumPovratka.Name = "dtpDatumPovratka";
-            dtpDatumPovratka.Size = new Size(200, 23);
+            dtpDatumPovratka.Size = new Size(284, 26);
             dtpDatumPovratka.TabIndex = 9;
             dtpDatumPovratka.ValueChanged += dtpDatumPovratka_ValueChanged;
             // 
             // dtpDatumIznajmljivanja
             // 
-            dtpDatumIznajmljivanja.Location = new Point(140, 9);
+            dtpDatumIznajmljivanja.Location = new Point(200, 12);
+            dtpDatumIznajmljivanja.Margin = new Padding(4);
             dtpDatumIznajmljivanja.Name = "dtpDatumIznajmljivanja";
-            dtpDatumIznajmljivanja.Size = new Size(200, 23);
+            dtpDatumIznajmljivanja.Size = new Size(284, 26);
             dtpDatumIznajmljivanja.TabIndex = 8;
             dtpDatumIznajmljivanja.ValueChanged += dtpDatumIznajmljivanja_ValueChanged;
             // 
             // btnObrisiIznajmljivanje
             // 
-            btnObrisiIznajmljivanje.Location = new Point(205, 165);
+            btnObrisiIznajmljivanje.Location = new Point(505, 150);
+            btnObrisiIznajmljivanje.Margin = new Padding(4);
             btnObrisiIznajmljivanje.Name = "btnObrisiIznajmljivanje";
-            btnObrisiIznajmljivanje.Size = new Size(57, 23);
+            btnObrisiIznajmljivanje.Size = new Size(92, 31);
             btnObrisiIznajmljivanje.TabIndex = 7;
             btnObrisiIznajmljivanje.Text = "Obrisi";
             btnObrisiIznajmljivanje.UseVisualStyleBackColor = true;
@@ -164,9 +174,10 @@
             // 
             // btnPretraziIznajmljivanje
             // 
-            btnPretraziIznajmljivanje.Location = new Point(145, 165);
+            btnPretraziIznajmljivanje.Location = new Point(505, 90);
+            btnPretraziIznajmljivanje.Margin = new Padding(4);
             btnPretraziIznajmljivanje.Name = "btnPretraziIznajmljivanje";
-            btnPretraziIznajmljivanje.Size = new Size(54, 23);
+            btnPretraziIznajmljivanje.Size = new Size(92, 31);
             btnPretraziIznajmljivanje.TabIndex = 6;
             btnPretraziIznajmljivanje.Text = "Pretrazi";
             btnPretraziIznajmljivanje.UseVisualStyleBackColor = true;
@@ -174,9 +185,10 @@
             // 
             // btnPromeniIznajmljivanje
             // 
-            btnPromeniIznajmljivanje.Location = new Point(79, 165);
+            btnPromeniIznajmljivanje.Location = new Point(505, 34);
+            btnPromeniIznajmljivanje.Margin = new Padding(4);
             btnPromeniIznajmljivanje.Name = "btnPromeniIznajmljivanje";
-            btnPromeniIznajmljivanje.Size = new Size(60, 23);
+            btnPromeniIznajmljivanje.Size = new Size(92, 31);
             btnPromeniIznajmljivanje.TabIndex = 5;
             btnPromeniIznajmljivanje.Text = "Promeni";
             btnPromeniIznajmljivanje.UseVisualStyleBackColor = true;
@@ -184,9 +196,10 @@
             // 
             // btnUbaciIznajmljivanje
             // 
-            btnUbaciIznajmljivanje.Location = new Point(13, 165);
+            btnUbaciIznajmljivanje.Location = new Point(505, 206);
+            btnUbaciIznajmljivanje.Margin = new Padding(4);
             btnUbaciIznajmljivanje.Name = "btnUbaciIznajmljivanje";
-            btnUbaciIznajmljivanje.Size = new Size(60, 23);
+            btnUbaciIznajmljivanje.Size = new Size(92, 31);
             btnUbaciIznajmljivanje.TabIndex = 4;
             btnUbaciIznajmljivanje.Text = "Ubaci";
             btnUbaciIznajmljivanje.UseVisualStyleBackColor = true;
@@ -195,57 +208,64 @@
             // lblOstava
             // 
             lblOstava.AutoSize = true;
-            lblOstava.Location = new Point(13, 117);
+            lblOstava.Location = new Point(19, 156);
+            lblOstava.Margin = new Padding(4, 0, 4, 0);
             lblOstava.Name = "lblOstava";
-            lblOstava.Size = new Size(46, 15);
+            lblOstava.Size = new Size(70, 20);
             lblOstava.TabIndex = 3;
             lblOstava.Text = "Ostava:";
             // 
             // lblPoslovniPartner
             // 
             lblPoslovniPartner.AutoSize = true;
-            lblPoslovniPartner.Location = new Point(13, 84);
+            lblPoslovniPartner.Location = new Point(19, 112);
+            lblPoslovniPartner.Margin = new Padding(4, 0, 4, 0);
             lblPoslovniPartner.Name = "lblPoslovniPartner";
-            lblPoslovniPartner.Size = new Size(96, 15);
+            lblPoslovniPartner.Size = new Size(143, 20);
             lblPoslovniPartner.TabIndex = 2;
             lblPoslovniPartner.Text = "Poslovni partner:";
             // 
             // lblDatumPovratka
             // 
             lblDatumPovratka.AutoSize = true;
-            lblDatumPovratka.Location = new Point(13, 48);
+            lblDatumPovratka.Location = new Point(19, 64);
+            lblDatumPovratka.Margin = new Padding(4, 0, 4, 0);
             lblDatumPovratka.Name = "lblDatumPovratka";
-            lblDatumPovratka.Size = new Size(95, 15);
+            lblDatumPovratka.Size = new Size(141, 20);
             lblDatumPovratka.TabIndex = 1;
             lblDatumPovratka.Text = "Datum povratka:";
             // 
             // lblDatumIznajmljivanja
             // 
             lblDatumIznajmljivanja.AutoSize = true;
-            lblDatumIznajmljivanja.Location = new Point(13, 15);
+            lblDatumIznajmljivanja.Location = new Point(19, 20);
+            lblDatumIznajmljivanja.Margin = new Padding(4, 0, 4, 0);
             lblDatumIznajmljivanja.Name = "lblDatumIznajmljivanja";
-            lblDatumIznajmljivanja.Size = new Size(121, 15);
+            lblDatumIznajmljivanja.Size = new Size(177, 20);
             lblDatumIznajmljivanja.TabIndex = 0;
             lblDatumIznajmljivanja.Text = "Datum iznajmljivanja:";
             // 
             // panelStavkeControls
             // 
+            panelStavkeControls.AutoScroll = true;
             panelStavkeControls.Controls.Add(btnObrisiStavka);
             panelStavkeControls.Controls.Add(btnUbaciStavka);
             panelStavkeControls.Controls.Add(lblKosilica);
             panelStavkeControls.Controls.Add(lblCena);
             panelStavkeControls.Controls.Add(txtCena);
             panelStavkeControls.Controls.Add(cmbKosilica);
-            panelStavkeControls.Location = new Point(402, 207);
+            panelStavkeControls.Location = new Point(646, 276);
+            panelStavkeControls.Margin = new Padding(4);
             panelStavkeControls.Name = "panelStavkeControls";
-            panelStavkeControls.Size = new Size(230, 199);
+            panelStavkeControls.Size = new Size(416, 265);
             panelStavkeControls.TabIndex = 2;
             // 
             // btnObrisiStavka
             // 
-            btnObrisiStavka.Location = new Point(141, 159);
+            btnObrisiStavka.Location = new Point(201, 212);
+            btnObrisiStavka.Margin = new Padding(4);
             btnObrisiStavka.Name = "btnObrisiStavka";
-            btnObrisiStavka.Size = new Size(75, 23);
+            btnObrisiStavka.Size = new Size(107, 31);
             btnObrisiStavka.TabIndex = 5;
             btnObrisiStavka.Text = "Obrisi";
             btnObrisiStavka.UseVisualStyleBackColor = true;
@@ -253,9 +273,10 @@
             // 
             // btnUbaciStavka
             // 
-            btnUbaciStavka.Location = new Point(29, 159);
+            btnUbaciStavka.Location = new Point(41, 212);
+            btnUbaciStavka.Margin = new Padding(4);
             btnUbaciStavka.Name = "btnUbaciStavka";
-            btnUbaciStavka.Size = new Size(75, 23);
+            btnUbaciStavka.Size = new Size(107, 31);
             btnUbaciStavka.TabIndex = 4;
             btnUbaciStavka.Text = "Ubaci";
             btnUbaciStavka.UseVisualStyleBackColor = true;
@@ -264,73 +285,82 @@
             // lblKosilica
             // 
             lblKosilica.AutoSize = true;
-            lblKosilica.Location = new Point(32, 81);
+            lblKosilica.Location = new Point(35, 107);
+            lblKosilica.Margin = new Padding(4, 0, 4, 0);
             lblKosilica.Name = "lblKosilica";
-            lblKosilica.Size = new Size(50, 15);
+            lblKosilica.Size = new Size(75, 20);
             lblKosilica.TabIndex = 3;
             lblKosilica.Text = "Kosilica:";
             // 
             // lblCena
             // 
             lblCena.AutoSize = true;
-            lblCena.Location = new Point(29, 48);
+            lblCena.Location = new Point(35, 64);
+            lblCena.Margin = new Padding(4, 0, 4, 0);
             lblCena.Name = "lblCena";
-            lblCena.Size = new Size(37, 15);
+            lblCena.Size = new Size(56, 20);
             lblCena.TabIndex = 2;
             lblCena.Text = "Cena:";
             // 
             // txtCena
             // 
-            txtCena.Location = new Point(98, 45);
+            txtCena.Location = new Point(127, 58);
+            txtCena.Margin = new Padding(4);
             txtCena.Name = "txtCena";
-            txtCena.Size = new Size(100, 23);
+            txtCena.Size = new Size(171, 26);
             txtCena.TabIndex = 1;
             // 
             // cmbKosilica
             // 
             cmbKosilica.FormattingEnabled = true;
-            cmbKosilica.Location = new Point(89, 78);
+            cmbKosilica.Location = new Point(127, 104);
+            cmbKosilica.Margin = new Padding(4);
             cmbKosilica.Name = "cmbKosilica";
-            cmbKosilica.Size = new Size(121, 23);
+            cmbKosilica.Size = new Size(171, 28);
             cmbKosilica.TabIndex = 0;
             // 
             // panelStavke
             // 
+            panelStavke.AutoScroll = true;
             panelStavke.Controls.Add(dgvStavke);
             panelStavke.Controls.Add(lblStavke);
-            panelStavke.Location = new Point(402, 14);
+            panelStavke.Location = new Point(646, 19);
+            panelStavke.Margin = new Padding(4);
             panelStavke.Name = "panelStavke";
-            panelStavke.Size = new Size(230, 175);
+            panelStavke.Size = new Size(416, 233);
             panelStavke.TabIndex = 3;
             // 
             // dgvStavke
             // 
             dgvStavke.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStavke.Location = new Point(12, 43);
+            dgvStavke.Location = new Point(4, 73);
+            dgvStavke.Margin = new Padding(4);
             dgvStavke.Name = "dgvStavke";
-            dgvStavke.Size = new Size(204, 117);
+            dgvStavke.Size = new Size(408, 156);
             dgvStavke.TabIndex = 1;
             dgvStavke.SelectionChanged += dgvStavke_SelectionChanged;
             // 
             // lblStavke
             // 
             lblStavke.AutoSize = true;
-            lblStavke.Location = new Point(32, 13);
+            lblStavke.Location = new Point(46, 17);
+            lblStavke.Margin = new Padding(4, 0, 4, 0);
             lblStavke.Name = "lblStavke";
-            lblStavke.Size = new Size(41, 15);
+            lblStavke.Size = new Size(64, 20);
             lblStavke.TabIndex = 0;
             lblStavke.Text = "Stavke";
             // 
             // UCIznajmljivanja
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panelStavke);
             Controls.Add(panelStavkeControls);
             Controls.Add(panelIznajmljivanjaControls);
             Controls.Add(panelIznajmljivanja);
+            Margin = new Padding(4);
             Name = "UCIznajmljivanja";
-            Size = new Size(651, 420);
+            Size = new Size(1207, 545);
             panelIznajmljivanja.ResumeLayout(false);
             panelIznajmljivanja.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvIznajmljivanja).EndInit();

@@ -271,5 +271,11 @@ namespace KorisnickiInterfejs.ServerCommunication
             await SendRequest<object>(Operation.PretraziIznajmljivanje, i);
             return (Iznajmljivanje)await GetResult<Iznajmljivanje>();
         }
+
+        //internal async Task<Iznajmljivanje> PretraziIznajmljivanje(int id)
+        //{
+        //    await SendRequest<object>(Operation.PretraziIznajmljivanje, id);
+        //    return await GetResult<Iznajmljivanje>();
+        //}
     }
 }

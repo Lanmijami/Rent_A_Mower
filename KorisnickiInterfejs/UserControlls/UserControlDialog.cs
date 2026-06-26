@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KorisnickiInterfejs.GUIControllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs.UserControlls
 {
-    public partial class UserControlDialog : Form
+    public partial class UserControlDialog : BaseForm
     {
         public UserControlDialog()
         {

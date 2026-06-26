@@ -34,20 +34,23 @@
             btnKosilice = new Button();
             btnIznajmljivanja = new Button();
             btnOdjava = new Button();
+            btnUbaciVlasnika = new Button();
             SuspendLayout();
             // 
             // panelMain
             // 
-            panelMain.Location = new Point(335, -4);
+            panelMain.Location = new Point(259, -5);
+            panelMain.Margin = new Padding(4);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(467, 463);
+            panelMain.Size = new Size(1160, 617);
             panelMain.TabIndex = 0;
             // 
             // btnPocetna
             // 
-            btnPocetna.Location = new Point(38, 73);
+            btnPocetna.Location = new Point(54, 97);
+            btnPocetna.Margin = new Padding(4);
             btnPocetna.Name = "btnPocetna";
-            btnPocetna.Size = new Size(138, 23);
+            btnPocetna.Size = new Size(197, 31);
             btnPocetna.TabIndex = 1;
             btnPocetna.Text = "Pocetna";
             btnPocetna.UseVisualStyleBackColor = true;
@@ -55,9 +58,10 @@
             // 
             // btnPoslovniPartneri
             // 
-            btnPoslovniPartneri.Location = new Point(38, 124);
+            btnPoslovniPartneri.Location = new Point(54, 165);
+            btnPoslovniPartneri.Margin = new Padding(4);
             btnPoslovniPartneri.Name = "btnPoslovniPartneri";
-            btnPoslovniPartneri.Size = new Size(138, 23);
+            btnPoslovniPartneri.Size = new Size(197, 31);
             btnPoslovniPartneri.TabIndex = 2;
             btnPoslovniPartneri.Text = "Poslovni partneri";
             btnPoslovniPartneri.UseVisualStyleBackColor = true;
@@ -65,9 +69,10 @@
             // 
             // btnKosilice
             // 
-            btnKosilice.Location = new Point(38, 178);
+            btnKosilice.Location = new Point(54, 237);
+            btnKosilice.Margin = new Padding(4);
             btnKosilice.Name = "btnKosilice";
-            btnKosilice.Size = new Size(138, 23);
+            btnKosilice.Size = new Size(197, 31);
             btnKosilice.TabIndex = 3;
             btnKosilice.Text = "Kosilice";
             btnKosilice.UseVisualStyleBackColor = true;
@@ -75,9 +80,10 @@
             // 
             // btnIznajmljivanja
             // 
-            btnIznajmljivanja.Location = new Point(38, 235);
+            btnIznajmljivanja.Location = new Point(54, 313);
+            btnIznajmljivanja.Margin = new Padding(4);
             btnIznajmljivanja.Name = "btnIznajmljivanja";
-            btnIznajmljivanja.Size = new Size(138, 23);
+            btnIznajmljivanja.Size = new Size(197, 31);
             btnIznajmljivanja.TabIndex = 4;
             btnIznajmljivanja.Text = "Iznajmljivanja";
             btnIznajmljivanja.UseVisualStyleBackColor = true;
@@ -85,25 +91,38 @@
             // 
             // btnOdjava
             // 
-            btnOdjava.Location = new Point(47, 418);
+            btnOdjava.Location = new Point(67, 557);
+            btnOdjava.Margin = new Padding(4);
             btnOdjava.Name = "btnOdjava";
-            btnOdjava.Size = new Size(75, 23);
+            btnOdjava.Size = new Size(107, 31);
             btnOdjava.TabIndex = 5;
             btnOdjava.Text = "Odjava";
             btnOdjava.UseVisualStyleBackColor = true;
             btnOdjava.Click += btnOdjava_Click;
             // 
+            // btnUbaciVlasnika
+            // 
+            btnUbaciVlasnika.Location = new Point(54, 378);
+            btnUbaciVlasnika.Name = "btnUbaciVlasnika";
+            btnUbaciVlasnika.Size = new Size(197, 32);
+            btnUbaciVlasnika.TabIndex = 6;
+            btnUbaciVlasnika.Text = "Ubaci vlasnika";
+            btnUbaciVlasnika.UseVisualStyleBackColor = true;
+            btnUbaciVlasnika.Click += btnUbaciVlasnika_Click;
+            // 
             // FrmMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1419, 600);
+            Controls.Add(btnUbaciVlasnika);
             Controls.Add(btnOdjava);
             Controls.Add(btnIznajmljivanja);
             Controls.Add(btnKosilice);
             Controls.Add(btnPoslovniPartneri);
             Controls.Add(btnPocetna);
             Controls.Add(panelMain);
+            Margin = new Padding(4);
             Name = "FrmMain";
             Text = "Main";
             ResumeLayout(false);
@@ -117,6 +136,7 @@
         private Button btnKosilice;
         private Button btnIznajmljivanja;
         private Button btnOdjava;
+        private Button btnUbaciVlasnika;
 
         //public Panel PanelMenu { get => panelMenu; set => panelMenu = value; }
         //public Panel PanelLogo { get => panelLogo; set => panelLogo = value; }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs.UserControlls
 {
-    public partial class UCKosilice : UserControl
+    public partial class UCKosilice : BaseUserControl
     {
         private KosiliceController kosiliceController;
         public UCKosilice()
@@ -19,6 +19,7 @@ namespace KorisnickiInterfejs.UserControlls
             InitializeComponent();
             this.kosiliceController = KosiliceController.Instance;
             kosiliceController.Init(this);
+            dgvKosilice.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void btnUbaci_Click(object sender, EventArgs e)

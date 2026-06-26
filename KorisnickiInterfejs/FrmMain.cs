@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs
 {
-    public partial class FrmMain : Form
+    public partial class FrmMain : BaseForm
     {
         private MainController mainController;
         public FrmMain()
@@ -44,6 +44,11 @@ namespace KorisnickiInterfejs
         private void btnOdjava_Click(object sender, EventArgs e)
         {
             mainController.SignOut(this);
+        }
+
+        private void btnUbaciVlasnika_Click(object sender, EventArgs e)
+        {
+            mainController.UbaciVlasnika(this);
         }
     }
 }

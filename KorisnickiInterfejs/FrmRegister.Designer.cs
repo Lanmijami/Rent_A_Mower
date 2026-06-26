@@ -50,26 +50,32 @@
             // lblSistem
             // 
             lblSistem.AutoSize = true;
-            lblSistem.Location = new Point(30, 175);
+            lblSistem.Font = new Font("Arial Unicode MS", 20F, FontStyle.Bold);
+            lblSistem.Location = new Point(14, 15);
+            lblSistem.Margin = new Padding(4, 0, 4, 0);
             lblSistem.Name = "lblSistem";
-            lblSistem.Size = new Size(173, 15);
+            lblSistem.Size = new Size(435, 36);
             lblSistem.TabIndex = 0;
             lblSistem.Text = "Sistem za inzajmljivanje kosilica";
+            lblSistem.Click += lblSistem_Click;
             // 
             // lblPrijavi
             // 
             lblPrijavi.AutoSize = true;
-            lblPrijavi.Location = new Point(90, 322);
+            lblPrijavi.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
+            lblPrijavi.Location = new Point(14, 339);
+            lblPrijavi.Margin = new Padding(4, 0, 4, 0);
             lblPrijavi.Name = "lblPrijavi";
-            lblPrijavi.Size = new Size(77, 15);
+            lblPrijavi.Size = new Size(190, 31);
             lblPrijavi.TabIndex = 1;
             lblPrijavi.Text = "Prijavi ostavu";
             // 
             // btnPrijavi
             // 
-            btnPrijavi.Location = new Point(78, 367);
+            btnPrijavi.Location = new Point(231, 344);
+            btnPrijavi.Margin = new Padding(4, 4, 4, 4);
             btnPrijavi.Name = "btnPrijavi";
-            btnPrijavi.Size = new Size(75, 23);
+            btnPrijavi.Size = new Size(107, 31);
             btnPrijavi.TabIndex = 2;
             btnPrijavi.Text = "Prijavi";
             btnPrijavi.UseVisualStyleBackColor = true;
@@ -80,58 +86,67 @@
             panel1.Controls.Add(lblSistem);
             panel1.Controls.Add(btnPrijavi);
             panel1.Controls.Add(lblPrijavi);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(17, 16);
+            panel1.Margin = new Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(234, 426);
+            panel1.Size = new Size(469, 568);
             panel1.TabIndex = 3;
             // 
             // lblRegistruj
             // 
             lblRegistruj.AutoSize = true;
-            lblRegistruj.Location = new Point(298, 26);
+            lblRegistruj.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
+            lblRegistruj.Location = new Point(524, 31);
+            lblRegistruj.Margin = new Padding(4, 0, 4, 0);
             lblRegistruj.Name = "lblRegistruj";
-            lblRegistruj.Size = new Size(91, 15);
+            lblRegistruj.Size = new Size(226, 31);
             lblRegistruj.TabIndex = 4;
             lblRegistruj.Text = "Registruj ostavu";
             // 
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(295, 81);
+            lblUsername.Location = new Point(524, 104);
+            lblUsername.Margin = new Padding(4, 0, 4, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(88, 15);
+            lblUsername.Size = new Size(129, 20);
             lblUsername.TabIndex = 5;
             lblUsername.Text = "Korisnicko ime:";
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(298, 159);
+            lblPassword.Location = new Point(524, 215);
+            lblPassword.Margin = new Padding(4, 0, 4, 0);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(33, 15);
+            lblPassword.Size = new Size(52, 20);
             lblPassword.TabIndex = 6;
             lblPassword.Text = "Sifra:";
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(295, 99);
+            txtUsername.Location = new Point(524, 128);
+            txtUsername.Margin = new Padding(4, 4, 4, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(172, 23);
+            txtUsername.Size = new Size(244, 26);
             txtUsername.TabIndex = 7;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(298, 179);
+            txtPassword.Location = new Point(524, 239);
+            txtPassword.Margin = new Padding(4, 4, 4, 4);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(169, 23);
+            txtPassword.PasswordChar = 'x';
+            txtPassword.Size = new Size(240, 26);
             txtPassword.TabIndex = 8;
             // 
             // checkbxShow
             // 
             checkbxShow.AutoSize = true;
-            checkbxShow.Location = new Point(370, 208);
+            checkbxShow.Location = new Point(647, 273);
+            checkbxShow.Margin = new Padding(4, 4, 4, 4);
             checkbxShow.Name = "checkbxShow";
-            checkbxShow.Size = new Size(86, 19);
+            checkbxShow.Size = new Size(121, 24);
             checkbxShow.TabIndex = 9;
             checkbxShow.Text = "Prikazi sifru";
             checkbxShow.UseVisualStyleBackColor = true;
@@ -140,41 +155,46 @@
             // lblDatum
             // 
             lblDatum.AutoSize = true;
-            lblDatum.Location = new Point(310, 269);
+            lblDatum.Location = new Point(546, 355);
+            lblDatum.Margin = new Padding(4, 0, 4, 0);
             lblDatum.Name = "lblDatum";
-            lblDatum.Size = new Size(111, 15);
+            lblDatum.Size = new Size(163, 20);
             lblDatum.TabIndex = 10;
             lblDatum.Text = "Datum proizvodnje:";
             // 
             // dtpDatumProizvodnje
             // 
-            dtpDatumProizvodnje.Location = new Point(310, 287);
+            dtpDatumProizvodnje.Location = new Point(546, 379);
+            dtpDatumProizvodnje.Margin = new Padding(4, 4, 4, 4);
             dtpDatumProizvodnje.Name = "dtpDatumProizvodnje";
-            dtpDatumProizvodnje.Size = new Size(200, 23);
+            dtpDatumProizvodnje.Size = new Size(284, 26);
             dtpDatumProizvodnje.TabIndex = 11;
             // 
             // lblVlasnik
             // 
             lblVlasnik.AutoSize = true;
-            lblVlasnik.Location = new Point(310, 344);
+            lblVlasnik.Location = new Point(546, 455);
+            lblVlasnik.Margin = new Padding(4, 0, 4, 0);
             lblVlasnik.Name = "lblVlasnik";
-            lblVlasnik.Size = new Size(47, 15);
+            lblVlasnik.Size = new Size(72, 20);
             lblVlasnik.TabIndex = 12;
             lblVlasnik.Text = "Vlasnik:";
             // 
             // cmbVlasnik
             // 
             cmbVlasnik.FormattingEnabled = true;
-            cmbVlasnik.Location = new Point(310, 362);
+            cmbVlasnik.Location = new Point(546, 479);
+            cmbVlasnik.Margin = new Padding(4, 4, 4, 4);
             cmbVlasnik.Name = "cmbVlasnik";
-            cmbVlasnik.Size = new Size(121, 23);
+            cmbVlasnik.Size = new Size(171, 28);
             cmbVlasnik.TabIndex = 13;
             // 
             // buttonDodaj
             // 
-            buttonDodaj.Location = new Point(454, 361);
+            buttonDodaj.Location = new Point(751, 477);
+            buttonDodaj.Margin = new Padding(4, 4, 4, 4);
             buttonDodaj.Name = "buttonDodaj";
-            buttonDodaj.Size = new Size(75, 23);
+            buttonDodaj.Size = new Size(107, 31);
             buttonDodaj.TabIndex = 14;
             buttonDodaj.Text = "+";
             buttonDodaj.UseVisualStyleBackColor = true;
@@ -182,9 +202,10 @@
             // 
             // btnRegistruj
             // 
-            btnRegistruj.Location = new Point(395, 401);
+            btnRegistruj.Location = new Point(546, 528);
+            btnRegistruj.Margin = new Padding(4, 4, 4, 4);
             btnRegistruj.Name = "btnRegistruj";
-            btnRegistruj.Size = new Size(75, 23);
+            btnRegistruj.Size = new Size(312, 31);
             btnRegistruj.TabIndex = 15;
             btnRegistruj.Text = "Registruj";
             btnRegistruj.UseVisualStyleBackColor = true;
@@ -192,9 +213,9 @@
             // 
             // FrmRegister
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(623, 450);
+            ClientSize = new Size(890, 600);
             Controls.Add(btnRegistruj);
             Controls.Add(buttonDodaj);
             Controls.Add(cmbVlasnik);
@@ -208,6 +229,7 @@
             Controls.Add(lblUsername);
             Controls.Add(lblRegistruj);
             Controls.Add(panel1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FrmRegister";
             Text = "FrmRegister";
             panel1.ResumeLayout(false);

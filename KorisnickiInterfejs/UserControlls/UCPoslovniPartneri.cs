@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs.UserControlls
 {
-    public partial class UCPoslovniPartneri : UserControl
+    public partial class UCPoslovniPartneri : BaseUserControl
     {
         private PoslovniPartnerController poslovniPartneriController;
         public UCPoslovniPartneri()
@@ -19,6 +19,7 @@ namespace KorisnickiInterfejs.UserControlls
             InitializeComponent();
             this.poslovniPartneriController = PoslovniPartnerController.Instance;
             poslovniPartneriController.Init(this);
+            dgvPoslovniPartner.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void dgvPoslovniPartner_SelectionChanged(object sender, EventArgs e)

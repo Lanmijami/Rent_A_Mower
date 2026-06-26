@@ -10,7 +10,7 @@ namespace Common
     public class Response
     {
         public string JsonData { get; set; }
-        public bool isSuccessful { get; set; }
+        public bool isSuccessful { get; set; } = true;
         public string Message { get; set; }
         public T GetData<T>()
         {

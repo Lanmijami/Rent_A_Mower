@@ -268,12 +268,12 @@ namespace KorisnickiInterfejs.GUIControllers
         {
             if (uCKosilice.DgvKosilice.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Nije odabrana bicikla");
+                MessageBox.Show("Nije odabrana kosilica");
                 return;
             }
             if (uCKosilice.DgvKosilice.SelectedRows.Count > 1)
             {
-                MessageBox.Show("Odaberite samo jednu biciklu!");
+                MessageBox.Show("Odaberite samo jednu kosilicu");
                 return;
             }
 

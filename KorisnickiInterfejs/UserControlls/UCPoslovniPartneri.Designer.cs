@@ -66,16 +66,18 @@
             panelInfo.Controls.Add(lblPrezime);
             panelInfo.Controls.Add(txtIme);
             panelInfo.Controls.Add(lblIme);
-            panelInfo.Location = new Point(25, 18);
+            panelInfo.Location = new Point(36, 24);
+            panelInfo.Margin = new Padding(4);
             panelInfo.Name = "panelInfo";
-            panelInfo.Size = new Size(212, 457);
+            panelInfo.Size = new Size(303, 555);
             panelInfo.TabIndex = 0;
             // 
             // btnObrisi
             // 
-            btnObrisi.Location = new Point(26, 380);
+            btnObrisi.Location = new Point(37, 507);
+            btnObrisi.Margin = new Padding(4);
             btnObrisi.Name = "btnObrisi";
-            btnObrisi.Size = new Size(75, 23);
+            btnObrisi.Size = new Size(107, 31);
             btnObrisi.TabIndex = 12;
             btnObrisi.Text = "Obrisi";
             btnObrisi.UseVisualStyleBackColor = true;
@@ -83,9 +85,10 @@
             // 
             // btnPromeni
             // 
-            btnPromeni.Location = new Point(26, 351);
+            btnPromeni.Location = new Point(37, 468);
+            btnPromeni.Margin = new Padding(4);
             btnPromeni.Name = "btnPromeni";
-            btnPromeni.Size = new Size(75, 23);
+            btnPromeni.Size = new Size(107, 31);
             btnPromeni.TabIndex = 11;
             btnPromeni.Text = "Promeni";
             btnPromeni.UseVisualStyleBackColor = true;
@@ -93,9 +96,10 @@
             // 
             // btnPretrazi
             // 
-            btnPretrazi.Location = new Point(26, 322);
+            btnPretrazi.Location = new Point(37, 429);
+            btnPretrazi.Margin = new Padding(4);
             btnPretrazi.Name = "btnPretrazi";
-            btnPretrazi.Size = new Size(75, 23);
+            btnPretrazi.Size = new Size(107, 31);
             btnPretrazi.TabIndex = 10;
             btnPretrazi.Text = "Pretrazi";
             btnPretrazi.UseVisualStyleBackColor = true;
@@ -103,9 +107,10 @@
             // 
             // btnUbaci
             // 
-            btnUbaci.Location = new Point(26, 293);
+            btnUbaci.Location = new Point(37, 391);
+            btnUbaci.Margin = new Padding(4);
             btnUbaci.Name = "btnUbaci";
-            btnUbaci.Size = new Size(75, 23);
+            btnUbaci.Size = new Size(107, 31);
             btnUbaci.TabIndex = 9;
             btnUbaci.Text = "Ubaci";
             btnUbaci.UseVisualStyleBackColor = true;
@@ -113,9 +118,10 @@
             // 
             // buttonDodaj
             // 
-            buttonDodaj.Location = new Point(156, 251);
+            buttonDodaj.Location = new Point(223, 335);
+            buttonDodaj.Margin = new Padding(4);
             buttonDodaj.Name = "buttonDodaj";
-            buttonDodaj.Size = new Size(39, 23);
+            buttonDodaj.Size = new Size(56, 31);
             buttonDodaj.TabIndex = 8;
             buttonDodaj.Text = "+";
             buttonDodaj.UseVisualStyleBackColor = true;
@@ -124,65 +130,73 @@
             // cmbMesto
             // 
             cmbMesto.FormattingEnabled = true;
-            cmbMesto.Location = new Point(29, 251);
+            cmbMesto.Location = new Point(41, 335);
+            cmbMesto.Margin = new Padding(4);
             cmbMesto.Name = "cmbMesto";
-            cmbMesto.Size = new Size(121, 23);
+            cmbMesto.Size = new Size(171, 28);
             cmbMesto.TabIndex = 7;
             // 
             // lblMesto
             // 
             lblMesto.AutoSize = true;
-            lblMesto.Location = new Point(26, 233);
+            lblMesto.Location = new Point(37, 311);
+            lblMesto.Margin = new Padding(4, 0, 4, 0);
             lblMesto.Name = "lblMesto";
-            lblMesto.Size = new Size(40, 15);
+            lblMesto.Size = new Size(58, 20);
             lblMesto.TabIndex = 6;
             lblMesto.Text = "Mesto";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(29, 191);
+            txtEmail.Location = new Point(41, 255);
+            txtEmail.Margin = new Padding(4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(100, 23);
+            txtEmail.Size = new Size(141, 26);
             txtEmail.TabIndex = 5;
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(26, 164);
+            lblEmail.Location = new Point(37, 219);
+            lblEmail.Margin = new Padding(4, 0, 4, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(39, 15);
+            lblEmail.Size = new Size(58, 20);
             lblEmail.TabIndex = 4;
             lblEmail.Text = "Email:";
             // 
             // txtPrezime
             // 
-            txtPrezime.Location = new Point(26, 125);
+            txtPrezime.Location = new Point(37, 167);
+            txtPrezime.Margin = new Padding(4);
             txtPrezime.Name = "txtPrezime";
-            txtPrezime.Size = new Size(100, 23);
+            txtPrezime.Size = new Size(141, 26);
             txtPrezime.TabIndex = 3;
             // 
             // lblPrezime
             // 
             lblPrezime.AutoSize = true;
-            lblPrezime.Location = new Point(23, 98);
+            lblPrezime.Location = new Point(33, 131);
+            lblPrezime.Margin = new Padding(4, 0, 4, 0);
             lblPrezime.Name = "lblPrezime";
-            lblPrezime.Size = new Size(52, 15);
+            lblPrezime.Size = new Size(78, 20);
             lblPrezime.TabIndex = 2;
             lblPrezime.Text = "Prezime:";
             // 
             // txtIme
             // 
-            txtIme.Location = new Point(26, 56);
+            txtIme.Location = new Point(37, 75);
+            txtIme.Margin = new Padding(4);
             txtIme.Name = "txtIme";
-            txtIme.Size = new Size(100, 23);
+            txtIme.Size = new Size(141, 26);
             txtIme.TabIndex = 1;
             // 
             // lblIme
             // 
             lblIme.AutoSize = true;
-            lblIme.Location = new Point(23, 29);
+            lblIme.Location = new Point(33, 39);
+            lblIme.Margin = new Padding(4, 0, 4, 0);
             lblIme.Name = "lblIme";
-            lblIme.Size = new Size(30, 15);
+            lblIme.Size = new Size(44, 20);
             lblIme.TabIndex = 0;
             lblIme.Text = "Ime:";
             // 
@@ -191,25 +205,28 @@
             panelShow.Controls.Add(dgvPoslovniPartner);
             panelShow.Controls.Add(btnKreiraj);
             panelShow.Controls.Add(lblPoslovniPartner);
-            panelShow.Location = new Point(260, 18);
+            panelShow.Location = new Point(371, 24);
+            panelShow.Margin = new Padding(4);
             panelShow.Name = "panelShow";
-            panelShow.Size = new Size(534, 457);
+            panelShow.Size = new Size(676, 555);
             panelShow.TabIndex = 1;
             // 
             // dgvPoslovniPartner
             // 
             dgvPoslovniPartner.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPoslovniPartner.Location = new Point(26, 71);
+            dgvPoslovniPartner.Location = new Point(19, 95);
+            dgvPoslovniPartner.Margin = new Padding(4);
             dgvPoslovniPartner.Name = "dgvPoslovniPartner";
-            dgvPoslovniPartner.Size = new Size(483, 372);
+            dgvPoslovniPartner.Size = new Size(423, 460);
             dgvPoslovniPartner.TabIndex = 2;
             dgvPoslovniPartner.SelectionChanged += dgvPoslovniPartner_SelectionChanged;
             // 
             // btnKreiraj
             // 
-            btnKreiraj.Location = new Point(350, 27);
+            btnKreiraj.Location = new Point(335, 34);
+            btnKreiraj.Margin = new Padding(4);
             btnKreiraj.Name = "btnKreiraj";
-            btnKreiraj.Size = new Size(75, 23);
+            btnKreiraj.Size = new Size(107, 31);
             btnKreiraj.TabIndex = 1;
             btnKreiraj.Text = "Kreiraj";
             btnKreiraj.UseVisualStyleBackColor = true;
@@ -218,20 +235,22 @@
             // lblPoslovniPartner
             // 
             lblPoslovniPartner.AutoSize = true;
-            lblPoslovniPartner.Location = new Point(26, 21);
+            lblPoslovniPartner.Location = new Point(37, 36);
+            lblPoslovniPartner.Margin = new Padding(4, 0, 4, 0);
             lblPoslovniPartner.Name = "lblPoslovniPartner";
-            lblPoslovniPartner.Size = new Size(93, 15);
+            lblPoslovniPartner.Size = new Size(138, 20);
             lblPoslovniPartner.TabIndex = 0;
             lblPoslovniPartner.Text = "Poslovni partner";
             // 
             // UCPoslovniPartneri
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panelShow);
             Controls.Add(panelInfo);
+            Margin = new Padding(4);
             Name = "UCPoslovniPartneri";
-            Size = new Size(825, 495);
+            Size = new Size(1059, 584);
             panelInfo.ResumeLayout(false);
             panelInfo.PerformLayout();
             panelShow.ResumeLayout(false);

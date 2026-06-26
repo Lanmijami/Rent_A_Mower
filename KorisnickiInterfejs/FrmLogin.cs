@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace KorisnickiInterfejs
 {
-    public partial class FrmLogin : Form
+    public partial class FrmLogin : BaseForm
     {
         private LoginController loginController;
         public FrmLogin()

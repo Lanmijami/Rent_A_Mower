@@ -101,15 +101,31 @@ namespace KorisnickiInterfejs.GUIControllers
             }
         }
 
+
+        //internal void StavkeSelectionChanged(UCIznajmljivanja uCIznajmljivanja)
+        //{
+        //    if (uCIznajmljivanja.DgvStavke.SelectedRows.Count > 0)
+        //    {
+        //        StavkaIznajmljivanja stavka = (StavkaIznajmljivanja)uCIznajmljivanja.DgvStavke.SelectedRows[0].DataBoundItem;
+        //        uCIznajmljivanja.TxtCena.Text = stavka.CenaNajma.ToString();
+        //        uCIznajmljivanja.CmbKosilica.SelectedValue = stavka.Kosilica.IdKosilica;
+        //    }
+        //}
+
         internal void StavkeSelectionChanged(UCIznajmljivanja uCIznajmljivanja)
         {
-            if (uCIznajmljivanja.DgvStavke.SelectedRows.Count > 0)
-            {
-                StavkaIznajmljivanja stavka = (StavkaIznajmljivanja)uCIznajmljivanja.DgvStavke.SelectedRows[0].DataBoundItem;
-                uCIznajmljivanja.TxtCena.Text = stavka.CenaNajma.ToString();
-                uCIznajmljivanja.CmbKosilica.SelectedValue = stavka.Kosilica.IdKosilica;
-            }
+            if (uCIznajmljivanja.DgvStavke.SelectedRows.Count == 0)
+                return;
+
+            var row = uCIznajmljivanja.DgvStavke.SelectedRows[0];
+
+            if (row.DataBoundItem is not StavkaIznajmljivanja stavka)
+                return;
+
+            uCIznajmljivanja.TxtCena.Text = stavka.CenaNajma.ToString();
+            uCIznajmljivanja.CmbKosilica.SelectedValue = stavka.Kosilica?.IdKosilica;
         }
+
 
         private void FormatStavkeDgv(UCIznajmljivanja uCIznajmljivanja)
         {
@@ -170,6 +186,49 @@ namespace KorisnickiInterfejs.GUIControllers
             }
         }
 
+        //internal void UbaciStavka(UCIznajmljivanja uCIznajmljivanja)
+        //{
+        //    if (uCIznajmljivanja.DgvIznajmljivanja.SelectedRows.Count == 0)
+        //    {
+        //        MessageBox.Show("Nije odabrano iznajmljivanje!");
+        //        return;
+        //    }
+
+        //    if (!ValidateFieldsStavka(uCIznajmljivanja))
+        //    {
+        //        return;
+        //    }
+
+        //    int cenaNajma = Int32.Parse(uCIznajmljivanja.TxtCena.Text);
+        //    Kosilica Kosilica = (Kosilica)uCIznajmljivanja.CmbKosilica.SelectedItem;
+        //    int rb = ((BindingList<StavkaIznajmljivanja>)uCIznajmljivanja.DgvStavke.DataSource).Count + 1;
+
+        //    try
+        //    {
+        //        StavkaIznajmljivanja stavka = new StavkaIznajmljivanja
+        //        {
+        //            Rb = rb,
+        //            CenaNajma = cenaNajma,
+        //            Kosilica = Kosilica,
+        //            IdIznajmljivanje = ((Iznajmljivanje)uCIznajmljivanja.DgvIznajmljivanja.SelectedRows[0].DataBoundItem).IdIznajmljivanje,
+        //        };
+
+        //        ((BindingList<StavkaIznajmljivanja>)uCIznajmljivanja.DgvStavke.DataSource).Add(stavka);
+        //        uCIznajmljivanja.DgvStavke.CurrentCell = uCIznajmljivanja.DgvStavke.Rows[uCIznajmljivanja.DgvStavke.RowCount - 1].Cells[1];
+        //        uCIznajmljivanja.DgvStavke.Refresh();
+        //        MessageBox.Show("Sistem je dodao stavku! Pritisnite 'Promeni' kako bi sačuvali promene!");
+        //    }
+        //    catch (SystemOperationException ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    catch (SocketException ex)
+        //    {
+        //        MessageBox.Show("Greška pri povezivanju sa serverom!");
+        //        Console.WriteLine(">>>>>> " + ex.Message);
+        //    }
+        //}
+
         internal void UbaciStavka(UCIznajmljivanja uCIznajmljivanja)
         {
             if (uCIznajmljivanja.DgvIznajmljivanja.SelectedRows.Count == 0)
@@ -183,23 +242,53 @@ namespace KorisnickiInterfejs.GUIControllers
                 return;
             }
 
-            int cenaNajma = Int32.Parse(uCIznajmljivanja.TxtCena.Text);
-            Kosilica Kosilica = (Kosilica)uCIznajmljivanja.CmbKosilica.SelectedItem;
-            int rb = ((BindingList<StavkaIznajmljivanja>)uCIznajmljivanja.DgvStavke.DataSource).Count + 1;
-
             try
             {
+                var list = uCIznajmljivanja.DgvStavke.DataSource as BindingList<StavkaIznajmljivanja>;
+
+                if (list == null)
+                {
+                    MessageBox.Show("Lista stavki nije inicijalizovana!");
+                    return;
+                }
+
+                int cenaNajma = int.Parse(uCIznajmljivanja.TxtCena.Text);
+
+                Kosilica kosilica = uCIznajmljivanja.CmbKosilica.SelectedItem as Kosilica;
+                if (kosilica == null)
+                {
+                    MessageBox.Show("Nije odabrana kosilica!");
+                    return;
+                }
+
+                var iznajmljivanje = uCIznajmljivanja.DgvIznajmljivanja.SelectedRows[0].DataBoundItem as Iznajmljivanje;
+                if (iznajmljivanje == null)
+                {
+                    MessageBox.Show("Greška pri čitanju iznajmljivanja!");
+                    return;
+                }
+
+                int rb = list.Count + 1;
+
                 StavkaIznajmljivanja stavka = new StavkaIznajmljivanja
                 {
                     Rb = rb,
                     CenaNajma = cenaNajma,
-                    Kosilica = Kosilica,
-                    IdIznajmljivanje = ((Iznajmljivanje)uCIznajmljivanja.DgvIznajmljivanja.SelectedRows[0].DataBoundItem).IdIznajmljivanje,
+                    Kosilica = kosilica,
+                    IdIznajmljivanje = iznajmljivanje.IdIznajmljivanje
                 };
 
-                ((BindingList<StavkaIznajmljivanja>)uCIznajmljivanja.DgvStavke.DataSource).Add(stavka);
-                uCIznajmljivanja.DgvStavke.CurrentCell = uCIznajmljivanja.DgvStavke.Rows[uCIznajmljivanja.DgvStavke.RowCount - 1].Cells[1];
-                uCIznajmljivanja.DgvStavke.Refresh();
+                list.Add(stavka);
+
+                // safer UI refresh (no CurrentCell crash)
+                uCIznajmljivanja.DgvStavke.ClearSelection();
+
+                int lastIndex = list.Count - 1;
+                if (lastIndex >= 0 && uCIznajmljivanja.DgvStavke.ColumnCount > 0)
+                {
+                    uCIznajmljivanja.DgvStavke.Rows[lastIndex].Selected = true;
+                }
+
                 MessageBox.Show("Sistem je dodao stavku! Pritisnite 'Promeni' kako bi sačuvali promene!");
             }
             catch (SystemOperationException ex)

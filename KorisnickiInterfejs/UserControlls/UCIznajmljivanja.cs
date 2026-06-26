@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs.UserControlls
 {
-    public partial class UCIznajmljivanja : UserControl
+    public partial class UCIznajmljivanja : BaseUserControl
     {
         IznajmljivanjaController iznajmljivanjaController;
         public UCIznajmljivanja()
@@ -19,6 +19,11 @@ namespace KorisnickiInterfejs.UserControlls
             InitializeComponent();
             this.iznajmljivanjaController = IznajmljivanjaController.Instance;
             iznajmljivanjaController.Init(this);
+            dgvIznajmljivanja.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvStavke.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvIznajmljivanja.AllowUserToAddRows = false;
+            dgvIznajmljivanja.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvIznajmljivanja.MultiSelect = false;
         }
 
         public void dgvIznajmljivanja_SelectionChanged(object sender, EventArgs e)

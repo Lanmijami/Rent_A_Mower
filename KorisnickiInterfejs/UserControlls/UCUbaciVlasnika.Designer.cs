@@ -41,73 +41,83 @@
             // lblUbaciVlasnika
             // 
             lblUbaciVlasnika.AutoSize = true;
-            lblUbaciVlasnika.Location = new Point(139, 25);
+            lblUbaciVlasnika.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
+            lblUbaciVlasnika.Location = new Point(157, 36);
+            lblUbaciVlasnika.Margin = new Padding(4, 0, 4, 0);
             lblUbaciVlasnika.Name = "lblUbaciVlasnika";
-            lblUbaciVlasnika.Size = new Size(82, 15);
+            lblUbaciVlasnika.Size = new Size(204, 31);
             lblUbaciVlasnika.TabIndex = 0;
             lblUbaciVlasnika.Text = "Ubaci vlasnika";
             // 
             // lblIme
             // 
             lblIme.AutoSize = true;
-            lblIme.Location = new Point(25, 82);
+            lblIme.Location = new Point(36, 109);
+            lblIme.Margin = new Padding(4, 0, 4, 0);
             lblIme.Name = "lblIme";
-            lblIme.Size = new Size(30, 15);
+            lblIme.Size = new Size(44, 20);
             lblIme.TabIndex = 1;
             lblIme.Text = "Ime:";
             // 
             // lblPrezime
             // 
             lblPrezime.AutoSize = true;
-            lblPrezime.Location = new Point(25, 151);
+            lblPrezime.Location = new Point(36, 201);
+            lblPrezime.Margin = new Padding(4, 0, 4, 0);
             lblPrezime.Name = "lblPrezime";
-            lblPrezime.Size = new Size(52, 15);
+            lblPrezime.Size = new Size(78, 20);
             lblPrezime.TabIndex = 2;
             lblPrezime.Text = "Prezime:";
             // 
             // txtIme
             // 
-            txtIme.Location = new Point(28, 100);
+            txtIme.Location = new Point(40, 133);
+            txtIme.Margin = new Padding(4, 4, 4, 4);
             txtIme.Name = "txtIme";
-            txtIme.Size = new Size(100, 23);
+            txtIme.Size = new Size(141, 26);
             txtIme.TabIndex = 3;
             // 
             // txtPrezime
             // 
-            txtPrezime.Location = new Point(28, 169);
+            txtPrezime.Location = new Point(40, 225);
+            txtPrezime.Margin = new Padding(4, 4, 4, 4);
             txtPrezime.Name = "txtPrezime";
-            txtPrezime.Size = new Size(100, 23);
+            txtPrezime.Size = new Size(141, 26);
             txtPrezime.TabIndex = 4;
             // 
             // btnUbaci
             // 
-            btnUbaci.Location = new Point(136, 256);
+            btnUbaci.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
+            btnUbaci.Location = new Point(183, 389);
+            btnUbaci.Margin = new Padding(4, 4, 4, 4);
             btnUbaci.Name = "btnUbaci";
-            btnUbaci.Size = new Size(75, 23);
+            btnUbaci.Size = new Size(140, 64);
             btnUbaci.TabIndex = 5;
-            btnUbaci.Text = "btnUbaci";
+            btnUbaci.Text = "Ubaci";
             btnUbaci.UseVisualStyleBackColor = true;
             btnUbaci.Click += btnUbaci_Click;
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(214, 91);
+            lblEmail.Location = new Point(303, 109);
+            lblEmail.Margin = new Padding(4, 0, 4, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(39, 15);
+            lblEmail.Size = new Size(58, 20);
             lblEmail.TabIndex = 6;
             lblEmail.Text = "Email:";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(214, 109);
+            txtEmail.Location = new Point(303, 133);
+            txtEmail.Margin = new Padding(4, 4, 4, 4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(100, 23);
+            txtEmail.Size = new Size(141, 26);
             txtEmail.TabIndex = 7;
             // 
             // UCUbaciVlasnika
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(txtEmail);
             Controls.Add(lblEmail);
@@ -117,8 +127,9 @@
             Controls.Add(lblPrezime);
             Controls.Add(lblIme);
             Controls.Add(lblUbaciVlasnika);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "UCUbaciVlasnika";
-            Size = new Size(354, 363);
+            Size = new Size(506, 484);
             ResumeLayout(false);
             PerformLayout();
         }

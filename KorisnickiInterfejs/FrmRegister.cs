@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace KorisnickiInterfejs
 {
-    public partial class FrmRegister : Form
+    public partial class FrmRegister : BaseForm
     {
         private RegisterController registerController;
 
@@ -40,6 +40,11 @@ namespace KorisnickiInterfejs
         private void checkbxShow_CheckedChanged(object sender, EventArgs e)
         {
             registerController.PrikaziSifru(this);
+        }
+
+        private void lblSistem_Click(object sender, EventArgs e)
+        {
+
         }
 
         //private void lblX_Click(object sender, EventArgs e)
