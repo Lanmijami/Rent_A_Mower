@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui.Controls"
+    x:Class="MauiPhone.QrScannerPage"
+    Title="Scan QR Code">
+
+    <Grid>
+
+        <!-- Camera -->
+        <zxing:CameraBarcodeReaderView
+            x:Name="CameraView"
+            BarcodesDetected="CameraView_BarcodesDetected"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill" />
+
+        <!-- Scanning box -->
+        <Border
+            WidthRequest="250"
+            HeightRequest="250"
+            Stroke="White"
+            StrokeThickness="3"
+            BackgroundColor="Transparent"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+
+        </Border>
+
+        <!-- Instructions -->
+        <VerticalStackLayout
+            VerticalOptions="End"
+            HorizontalOptions="Fill"
+            Spacing="10"
+            Padding="20"
+            Margin="0,0,0,30">
+
+            <Label
+                Text="Point your camera at a QR code"
+                TextColor="White"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                BackgroundColor="#99000000"
+                Padding="10" />
+
+            <Label
+                x:Name="ResultLabel"
+                Text=""
+                TextColor="White"
+                FontSize="14"
+                HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+
+    </Grid>
+
+</ContentPage>

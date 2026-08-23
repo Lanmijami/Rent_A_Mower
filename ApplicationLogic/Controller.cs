@@ -139,9 +139,21 @@ namespace ApplicationLogic
             so.ExecuteTemplate();
         }
 
+        public void KreirajOstava(Ostava o)
+        {
+            SystemOperationBase so = new KreirajOstavaSO(o);
+            so.ExecuteTemplate();
+        }
+
         public void ObrisiKosilica(Kosilica k)
         {
             SystemOperationBase so = new ObrisiKosilicaSO(k);
+            so.ExecuteTemplate();
+        }
+
+        public void ObrisiOstava(Ostava o)
+        {
+            SystemOperationBase so = new ObrisiOstavaSO(o);
             so.ExecuteTemplate();
         }
 
@@ -154,6 +166,12 @@ namespace ApplicationLogic
         public void PromeniKosilica(Kosilica k)
         {
             SystemOperationBase so = new PromeniKosilicaSO(k);
+            so.ExecuteTemplate();
+        }
+
+        public void PromeniOstava(Ostava o)
+        {
+            SystemOperationBase so = new PromeniOstavaSO(o);
             so.ExecuteTemplate();
         }
 
@@ -214,6 +232,13 @@ namespace ApplicationLogic
             SystemOperationBase so = new PretraziIznajmljivanjeSO(i);
             so.ExecuteTemplate();
             return ((PretraziIznajmljivanjeSO)so).Result;
+        }
+
+        public Ostava PretraziOstava(Ostava o)
+        {
+            SystemOperationBase so = new PretraziOstavaSO(o);
+            so.ExecuteTemplate();
+            return ((PretraziOstavaSO)so).Result;
         }
 
     }

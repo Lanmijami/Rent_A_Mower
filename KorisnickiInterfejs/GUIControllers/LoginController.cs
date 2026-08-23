@@ -60,6 +60,40 @@ namespace KorisnickiInterfejs.GUIControllers
             frmLogin.WindowState = System.Windows.Forms.FormWindowState.Minimized;
         }
 
+        //internal async bool PrijaviSeMobilno(string korisnickoIme, string sifra)
+        //{
+        //    try
+        //    {
+        //        Ostava ostava = new Ostava
+        //        {
+        //            KorisnickoIme = korisnickoIme,
+        //            Sifra = sifra,
+        //        };
+
+        //        Communication.Instance.Connect();
+        //        TrenutnaOstava = await Communication.Instance.PrijaviOstava(ostava);
+
+
+        //        if (TrenutnaOstava != null)
+        //        {
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //    catch (SystemOperationException ex)
+        //    {
+        //        return false;
+        //    }
+        //    catch (SocketException ex)
+        //    {
+        //        return false;
+        //    }
+        
+        //}
+
         internal async void PrijaviOstavu(FrmLogin frmLogin)
         {
 
