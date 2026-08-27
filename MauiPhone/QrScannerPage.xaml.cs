@@ -1,12 +1,20 @@
+using Domain;
+using System.Text;
+using System.Text.Json;
 using ZXing.Net.Maui;
 
 namespace MauiPhone;
 
 public partial class QrScannerPage : ContentPage
 {
+    public Kosilica jsonKosilica { get; set; }
+    private readonly HttpClient _httpClient;
     public QrScannerPage()
     {
         InitializeComponent();
+        AddKosilicaBtn.IsEnabled = false;
+        AddKosilicaBtn.BackgroundColor = Colors.Gray;
+        _httpClient = new HttpClient();
 
         CameraView.Options = new BarcodeReaderOptions
         {
@@ -33,7 +41,6 @@ public partial class QrScannerPage : ContentPage
                 (uri.Scheme == Uri.UriSchemeHttp ||
                  uri.Scheme == Uri.UriSchemeHttps))
             {
-                ResultLabel.Text = result.Value;
 
                 await DisplayAlert(
                     "QR Kod je skeniran",
@@ -42,21 +49,40 @@ public partial class QrScannerPage : ContentPage
             }
             else
             {
-                ResultLabel.Text = result.Value;
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var jsonObject = JsonSerializer.Deserialize<Kosilica>(result.Value, options);
+                jsonKosilica = jsonObject;
+
+                // Safely retrieve the model string or provide a fallback if null
+                string modelText = jsonObject?.Model?.ToString() ?? "Nepoznat model / Neispravan JSON";
 
                 await DisplayAlert(
                     "QR KOd je skeniran",
-                    result.Value,
+                    modelText,
                     "OK");
+
+                AddKosilicaBtn.IsEnabled = true;
+                AddKosilicaBtn.BackgroundColor = Colors.MediumPurple;
             }
         });
     }
 
-    private async void ResultLabel_Tapped(object sender, EventArgs e)
+    private async void AddKosilica(object sender, EventArgs e)
     {
-        if (Uri.TryCreate(ResultLabel.Text, UriKind.Absolute, out Uri? uri))
+        string jsonString = JsonSerializer.Serialize(jsonKosilica);
+        using var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+        using var httpClient = new HttpClient();
+        HttpResponseMessage response = await httpClient.PostAsync("http://192.168.0.47:7109/kosilica", content);
+
+        if (response.IsSuccessStatusCode)
         {
-            await Launcher.Default.OpenAsync(uri);
+            string responseBody = await response.Content.ReadAsStringAsync();
+            await DisplayAlert("Uspeh!", jsonKosilica.Model + " je dodata!", "OK");
+        }
+        else
+        {
+            await DisplayAlert("Greska!", response.StatusCode.ToString(), "OK");
         }
     }
 }

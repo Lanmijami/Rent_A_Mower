@@ -1,39 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiPhone.MainPage">
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiPhone.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
+            Padding="25"
+            Spacing="30"
             HorizontalOptions="Center"
             VerticalOptions="Center">
-            
 
-            <Label
-                Text="Skeniranje kosilica:"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+            <!-- Title -->
+            <VerticalStackLayout
+                Spacing="5"
+                HorizontalOptions="Center"
+                Margin="0,40,0,30">
 
-            <Label
-                Text="Sistem za skeniranje kosilica"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level3"
-                SemanticProperties.Description="Sistem za skeniranje" />
+                <Label
+                    Text="- Evidencija"
+                    FontSize="38"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center" 
+                    TextColor="MediumPurple"/>
 
-            <Button
-                x:Name="RedirectQr"
-                Text="Skeniraj kosilice" 
-                SemanticProperties.Hint="Otvara novu stranicu"
-                Clicked="Redirect"
-                HorizontalOptions="CenterAndExpand" />
-            <Button
-                x:Name="RedirectHttp"
-                Text="Http Test" 
-                SemanticProperties.Hint="Otvara novu stranicu"
-                Clicked="HttpRedirect"
-                HorizontalOptions="CenterAndExpand" />
-            
+                <Label
+                    Text="kosilica -"
+                    FontSize="38"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center" 
+                    TextColor="MediumPurple"/>
+
+            </VerticalStackLayout>
+
+
+            <!-- Buttons -->
+            <VerticalStackLayout
+                Spacing="20"
+                HorizontalOptions="Center">
+
+                <Button
+                    x:Name="RedirectQr"
+                    Text="Skeniraj kosilice"
+                    Clicked="Redirect"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    WidthRequest="300"
+                    HeightRequest="65"
+                    CornerRadius="15"
+                    HorizontalOptions="Center" />
+
+                <Button
+                    x:Name="RedirectHttp"
+                    Text="Interno stanje"
+                    Clicked="HttpRedirect"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    WidthRequest="300"
+                    HeightRequest="65"
+                    CornerRadius="15"
+                    HorizontalOptions="Center" />
+
+            </VerticalStackLayout>
+
         </VerticalStackLayout>
     </ScrollView>
 

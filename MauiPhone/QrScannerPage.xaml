@@ -47,13 +47,12 @@
                 HorizontalTextAlignment="Center"
                 BackgroundColor="#99000000"
                 Padding="10" />
+            <Button
+                x:Name="AddKosilicaBtn"
+                Text="Dodaj kosilicu"
+                Clicked="AddKosilica"
+                />
 
-            <Label
-                x:Name="ResultLabel"
-                Text=""
-                TextColor="White"
-                FontSize="14"
-                HorizontalTextAlignment="Center" />
 
         </VerticalStackLayout>
 

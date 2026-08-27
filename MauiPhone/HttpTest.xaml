@@ -5,22 +5,108 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MauiPhone.HttpTest">
 
-    <VerticalStackLayout
-        HorizontalOptions="Fill">
+    <ScrollView>
 
-        <Label
-            x:Name="ResultLabel"
-            Text="Kosilice"
-            FontSize="20" />
-        <Button
-            Text="Vrati kosilice"
-            Clicked="OnGetKosiliceClicked"
-            FontSize="30"
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="25"
             HorizontalOptions="Center"
-            VerticalOptions="Center"
-            />
-        
+            VerticalOptions="Center">
 
-    </VerticalStackLayout>
+            <!-- Title -->
+            <Label
+                Text="- Interni sistem -"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0,10,0,25"
+                TextColor="MediumPurple" />
+
+            <!-- Data -->
+            <Grid
+                ColumnDefinitions="220,60"
+                RowDefinitions="Auto,Auto,Auto"
+                RowSpacing="25"
+                ColumnSpacing="10"
+                HorizontalOptions="Center">
+
+                <!-- Kosilice -->
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Kosilice:"
+                    FontSize="26"
+                    VerticalOptions="Center" />
+
+                <Label
+                    x:Name="KosiliceLabel"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="0"
+                    FontSize="26"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center" />
+
+                <!-- Poslovni partneri -->
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Poslovni partneri:"
+                    FontSize="26"
+                    VerticalOptions="Center" />
+
+                <Label
+                    x:Name="PoslovniPartneriLabel"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="0"
+                    FontSize="26"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center" />
+
+                <!-- Ostave -->
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="Ostave:"
+                    FontSize="26"
+                    VerticalOptions="Center" />
+
+                <Label
+                    x:Name="OstaveLabel"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="0"
+                    FontSize="26"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center" />
+
+            </Grid>
+
+            <!-- Result -->
+            <Label
+                x:Name="ResultLabel"
+                Text=""
+                FontSize="16"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0,10,0,0" />
+
+            <!-- Refresh -->
+            <Button
+                Text="Refresh"
+                Clicked="RefreshData"
+                FontSize="20"
+                Padding="30,10"
+                HorizontalOptions="Center"
+                Margin="0,10,0,0" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
 
 </ContentPage>
