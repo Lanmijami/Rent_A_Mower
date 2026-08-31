@@ -32,7 +32,7 @@
                 HorizontalOptions="Center">
 
                 <!-- Kosilice -->
-                <Label
+                <Label 
                     Grid.Row="0"
                     Grid.Column="0"
                     Text="Kosilice:"
@@ -47,7 +47,11 @@
                     FontSize="26"
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center"
-                    VerticalOptions="Center" />
+                    VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnKosiliceLabelClicked" />
+                    </Label.GestureRecognizers>
+                </Label>
 
                 <!-- Poslovni partneri -->
                 <Label
@@ -65,7 +69,11 @@
                     FontSize="26"
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center"
-                    VerticalOptions="Center" />
+                    VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPoslovniPartneriLabelClicked" />
+                    </Label.GestureRecognizers>
+                </Label>
 
                 <!-- Ostave -->
                 <Label
@@ -83,7 +91,11 @@
                     FontSize="26"
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center"
-                    VerticalOptions="Center" />
+                    VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOstaveLabelClicked" />
+                    </Label.GestureRecognizers>
+                </Label>
 
             </Grid>
 

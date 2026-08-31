@@ -6,6 +6,9 @@ namespace MauiPhone;
 public partial class HttpTest : ContentPage
 {
     private readonly HttpClient _httpClient;
+    public string kosiliceString { get; set; }
+    public string ostaveString { get; set; }
+    public string poslovniPartneriString { get; set; }
 
     public HttpTest()
     {
@@ -38,6 +41,22 @@ public partial class HttpTest : ContentPage
             var pp =
                 await _httpClient.GetFromJsonAsync<List<PoslovniPartner>>(urlO);
 
+
+            kosilice.ForEach((k) =>
+            {
+                kosiliceString += k.Model + " - " + k.Boja + '\n';
+            });
+
+            ostave.ForEach((o) =>
+            {
+                ostaveString += o.KorisnickoIme + " - " + o.DatumOtvaranja.ToString("d") + '\n';
+            });
+
+            pp.ForEach((p) =>
+            {
+                poslovniPartneriString += p.Ime + " " + p.Prezime + '\n';
+            });
+
             KosiliceLabel.Text = kosilice?.Count.ToString();
             OstaveLabel.Text = ostave?.Count.ToString() ?? "0";
             PoslovniPartneriLabel.Text = pp?.Count.ToString() ?? "0";
@@ -53,5 +72,29 @@ public partial class HttpTest : ContentPage
     private async void OnGetDataClicked()
     {
        await functionBody();
+    }
+
+    private async void OnKosiliceLabelClicked(object sender, TappedEventArgs e)
+    {
+        if(KosiliceLabel.Text != "0")
+        {
+            await DisplayAlert("Kosilice", kosiliceString.ToString(), "OK");
+        }
+    }
+
+    private async void OnPoslovniPartneriLabelClicked(object sender, TappedEventArgs e)
+    {
+        if (KosiliceLabel.Text != "0")
+        {
+            await DisplayAlert("Poslovni partneri", poslovniPartneriString.ToString(), "OK");
+        }
+    }
+
+    private async void OnOstaveLabelClicked(object sender, TappedEventArgs e)
+    {
+        if (KosiliceLabel.Text != "0")
+        {
+            await DisplayAlert("Ostave", ostaveString.ToString(), "OK");
+        }
     }
 }
